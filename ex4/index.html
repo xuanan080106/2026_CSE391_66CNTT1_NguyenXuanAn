@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <table cellpadding="10">
+            <h3>Basic Info</h3>
+            <hr>
+            <tr>
+                <th>Employee ID</th>
+                <td>9</td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td>Dodsworth</td>
+            </tr>
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" id="first-name" name="first-name" value="Anne"></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male <br>
+                    <input type="radio" name="gender" value="Female"> Female <br>
+                    <input type="radio" name="gender" value="XXX"> XXX <br>
+                    <input type="radio" name="gender" value="ZZZ" checked> ZZZ <br>
+                </td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td><input type="text" id="title" name="title" value="Sales Representative"></td>
+            </tr>
+            <tr>
+                <th>Suffix</th>
+                <td><input type="text" id="suffix" name="suffix" value="Ms."></td>
+            </tr>
+            <tr>
+                <th>BirthDate</th>
+                <td><input type="text" id="birthdate" name="birthdate" value="1969-07-02 00:00:00"></td>
+            </tr>
+            <tr>
+                <th>HireDate</th>
+                <td><input type="text" id="hiredate" name="hiredate" value="1994-11-15 00:00:00"></td>
+            </tr>
+            <tr>
+                <th>SSN # (if applicable)</th>
+                <td><input type="text" id="ssnn" name="ssn" value="012-34-5678"></td>
+            </tr>
+            <tr>
+                <th>Reports To</th>
+                <td>
+                    <select>
+                        <option value="1" selected>Buchanan</option>
+                        <option value="2">Quanhai</option>
+                        <option value="3">lovai</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <h3>Contact Info</h3>
+        <hr>
+        <table cellpadding="10">
+            <tr>
+                <th>Email</th>
+                <td><input type="text" id="email" name="emaill" placeholder="name@example.com"></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><input type="text" id="address" name="addresss" value="7 Houndstooth Rd"></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><input type="text" id="city" name="city" value="London"></td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td><input type="text" id="region" name="region"></td>
+            </tr>
+            <tr>
+                <th>Postal Code</th>
+                <td><input type="text" id="postalcode" name="postalcode" value="WG2 L7T"></td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>
+                    <select name="country">
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option selected>Russian Federation</option>
+                        <option>France</option>
+                        <option>Germany</option>
+            </tr>
+            <tr>
+                <th>US Home Phone</th>
+                <td><input type="text" id="homephone" name="homephone" value="(234)234-2342"></td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td><input type="text" id="photo" name="photo" value="EmpiD9.bmp"></td>
+        </table>
+    </fieldset>
+    <fieldset>
+        <table cellpadding="10">
+            <h3>Optional Info</h3>
+            <hr>
+            <tr>
+                <th>Notes</th>
+                <td><input type="text" id="notes" name="notes" value="Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.ZZZ"></td>
+            </tr>
+            <tr>
+                <th>EPreferred Shift Active?</th>
+                <td><input type="checkbox" id="optionalinfo" name="optionalinfo" value="Regular"> Regular <br>
+                <input type="checkbox" id="optionalinfo" name="optionalinfo" value="Contractor" checked> Gravy Yard<br>
+                <input type="checkbox" id="optionalinfo" name="optionalinfo" value="" checked>
+                <img src="Screenshot 2026-02-05 191045.png"/></td>   
+            </tr>
+            <tr>
+                <th>Are you human?</th>
+                <input type="text" id="areyouhuman" name="areyouhuman" value=".">
+                <td><input type="text" id="emergencycontact" name="emergencycontact" value=""></td>
+        </table>
+    </fieldset>
+    <button type="submit" style="margin-left: 1300px;">Submit</button> <button style="margin-left: auto;">Delete</button>
+</body>
+</html>
