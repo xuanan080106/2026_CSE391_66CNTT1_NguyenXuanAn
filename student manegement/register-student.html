@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký sinh viên</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Đăng ký sinh viên</h1>
+        <p class="subtitle">Nhập thông tin để thêm sinh viên vào hệ thống.</p>
+
+        <form id="registerForm" novalidate>
+          <div class="grid two-cols">
+            <div class="field">
+              <label for="fullName">Họ và tên</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Ví dụ: Nguyễn Văn A" />
+              <small class="error" id="fullNameError"></small>
+            </div>
+
+            <div class="field">
+              <label for="studentCode">Mã sinh viên</label>
+              <input type="text" id="studentCode" name="studentCode" placeholder="VD: SV001" />
+              <small class="error" id="studentCodeError"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="a@example.com" />
+              <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="field">
+              <label for="phone">Số điện thoại</label>
+              <input type="text" id="phone" name="phone" placeholder="Ví dụ: 0912345678" />
+              <small class="error" id="phoneError"></small>
+            </div>
+
+            <div class="field">
+              <label for="major">Ngành học</label>
+              <select id="major" name="major">
+                <option value="">-- Chọn ngành --</option>
+                <option value="CNTT">CNTT</option>
+                <option value="Kinh doanh">Kinh doanh</option>
+                <option value="Thiết kế">Thiết kế</option>
+                <option value="Ngôn ngữ">Ngôn ngữ</option>
+              </select>
+              <small class="error" id="majorError"></small>
+            </div>
+
+            <fieldset class="field">
+              <legend>Giới tính</legend>
+              <div class="inline-options">
+                <label><input type="radio" name="gender" value="Nam" /> Nam</label>
+                <label><input type="radio" name="gender" value="Nữ" /> Nữ</label>
+              </div>
+              <small class="error" id="genderError"></small>
+            </fieldset>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">Đăng ký</button>
+            <a href="students.html" class="btn btn-secondary">Xem danh sách</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="storage.js"></script>
+    <script src="register-student.js"></script>
+  </body>
+</html>
