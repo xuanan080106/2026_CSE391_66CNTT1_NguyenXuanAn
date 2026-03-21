@@ -1,1 +1,104 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách sinh viên</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container stack-gap">
+      <section class="card">
+        <div class="card-header">
+          <h1>Danh sách sinh viên</h1>
+          <div class="header-actions">
+            <input id="searchInput" type="search" placeholder="Tìm theo tên, mã, email..." />
+            <a href="register-student.html" class="btn btn-primary">+ Add Student</a>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Họ tên</th>
+                <th>Mã SV</th>
+                <th>Email</th>
+                <th>SĐT</th>
+                <th>Ngành</th>
+                <th>Giới tính</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody id="studentsBody"></tbody>
+          </table>
+        </div>
+
+        <p id="emptyMessage" class="empty hidden">Chưa có sinh viên nào.</p>
+      </section>
+
+      <section class="card">
+        <h2 id="editTitle">Đăng ký/Sửa thông tin Sinh viên</h2>
+        <form id="editForm" novalidate>
+          <input type="hidden" id="editId" />
+
+          <div class="grid two-cols">
+            <div class="field">
+              <label for="editFullName">Họ và tên</label>
+              <input type="text" id="editFullName" name="fullName" />
+              <small class="error" id="editFullNameError"></small>
+            </div>
+
+            <div class="field">
+              <label for="editStudentCode">Mã sinh viên</label>
+              <input type="text" id="editStudentCode" name="studentCode" placeholder="VD: SV001" />
+              <small class="error" id="editStudentCodeError"></small>
+            </div>
+
+            <div class="field">
+              <label for="editEmail">Email</label>
+              <input type="email" id="editEmail" name="email" />
+              <small class="error" id="editEmailError"></small>
+            </div>
+
+            <div class="field">
+              <label for="editPhone">Số điện thoại</label>
+              <input type="text" id="editPhone" name="phone" />
+              <small class="error" id="editPhoneError"></small>
+            </div>
+
+            <div class="field">
+              <label for="editMajor">Ngành học</label>
+              <select id="editMajor" name="major">
+                <option value="">-- Chọn ngành --</option>
+                <option value="CNTT">CNTT</option>
+                <option value="Kinh doanh">Kinh doanh</option>
+                <option value="Thiết kế">Thiết kế</option>
+                <option value="Ngôn ngữ">Ngôn ngữ</option>
+              </select>
+              <small class="error" id="editMajorError"></small>
+            </div>
+
+            <fieldset class="field">
+              <legend>Giới tính</legend>
+              <div class="inline-options">
+                <label><input type="radio" name="editGender" value="Nam" /> Nam</label>
+                <label><input type="radio" name="editGender" value="Nữ" /> Nữ</label>
+              </div>
+              <small class="error" id="editGenderError"></small>
+            </fieldset>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">Lưu thông tin</button>
+            <button type="button" id="cancelEdit" class="btn btn-secondary">Hủy</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="storage.js"></script>
+    <script src="students.js"></script>
+  </body>
+</html>
